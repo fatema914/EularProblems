@@ -19,8 +19,8 @@ let main () =
     let digitSum=
         seq {
             for noOfInput in 1 .. noOfInput do
-            let digits = Console.ReadLine() 
-            yield (bigint.Parse(digits))
+                let digits = Console.ReadLine()
+                yield (bigint.Parse(digits))
             }
         |> Seq.sum
 
