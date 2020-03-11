@@ -16,7 +16,7 @@ let main () =
            Console.ReadLine()
            |> Convert.ToInt32
 
-    let digitSum=
+    let digitSum =
         seq {
             for noOfInput in 1 .. noOfInput do
                 let digits = Console.ReadLine()
