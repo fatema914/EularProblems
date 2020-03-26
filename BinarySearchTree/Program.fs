@@ -39,7 +39,7 @@ let dataAfterPreOrderTraverser =
     |> PreOrderTraverser
 printfn "%A" tree
 for data in dataAfterPreOrderTraverser do
- printfn "%A" data
+ printfn "%d" data
 
 
 
