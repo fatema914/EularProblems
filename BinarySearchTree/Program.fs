@@ -31,11 +31,15 @@ let PreOrderTraverser (tree : Tree<'a>) =
     PreOrderTraverserRec tree
 
 let data = [ 5; 8;  3; 4; 7; 1; 6; 2 ]
-let tree = data |> List.fold (fun n x -> n |> InsertDataIntoTree x) Empty
-let dataAfterPreOrderTraverser = tree |> PreOrderTraverser
+let tree =
+    data
+    |> List.fold (fun n x -> n |> InsertDataIntoTree x) Empty
+let dataAfterPreOrderTraverser =
+    tree
+    |> PreOrderTraverser
 printfn "%A" tree
 for data in dataAfterPreOrderTraverser do
-printfn "%A" data
+ printfn "%A" data
 
 
 
