@@ -2,11 +2,11 @@
 
 open System
 
-type Tree<'a> =
+type Tree =
     | Empty
-    | Node of value: 'a * leftNode: Tree<'a> * rightNode: Tree<'a>
+    | Node of value: int * leftNode: Tree * rightNode: Tree
 
-let rec InsertDataIntoTree data (tree : Tree<'a>) =
+let rec InsertDataIntoTree data (tree : Tree) =
     match tree with
     | Empty -> Node (data, Empty, Empty)
     | Node (value, leftNode, rightNode) when data <= value ->
@@ -17,8 +17,8 @@ let rec InsertDataIntoTree data (tree : Tree<'a>) =
         Node (value, leftNode, rightNode)
     | _ -> tree
 
-let PreOrderTraverser (tree : Tree<'a>) =
-    let rec PreOrderTraverserRec (tree : Tree<'a>) =
+let PreOrderTraverser (tree : Tree) =
+    let rec PreOrderTraverserRec (tree : Tree) =
         seq {
             match tree with
             | Empty -> ()
